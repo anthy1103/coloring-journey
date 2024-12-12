@@ -1,0 +1,66 @@
+.breadcumb {
+    margin: rem(15px) 0;
+
+    @include mq("md", min) {
+        margin: rem(15px) 0;
+    }
+
+    li {
+        display: inline-block;
+        position: relative;
+        margin-right: rem(5px);
+        padding-right: rem(10px);
+
+        @include mq("md", min) {
+            margin-right: rem(10px);
+            padding-right: rem(13px);
+        }
+
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+
+        &:after {
+            content: "»";
+            position: absolute;
+            right: rem(-3px);
+            top: rem(-3px);
+            font-size: rem(20px);
+        }
+
+        a {
+            font-size: rem(14px);
+
+            @include mq("md", min) {
+                font-size: rem(18px);
+            }
+        }
+
+        span {
+
+            color: $primary;
+
+            @include mq("md") {
+                font-size: rem(14px);
+            }
+        }
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.img_cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img_scale {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
