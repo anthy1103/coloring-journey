@@ -1,2 +1,92 @@
 @import "common/variables";
 @import "common/mixin";
+
+.p-intro {
+    padding: rem(45px) 0 rem(85px);
+    display: flex;
+    justify-content: space-between;
+
+    &__img {
+        width: rem(547px);
+    }
+
+    &__meta {
+        color: #444;
+        line-height: rem(26px);
+        width: rem(660px);
+        padding-top: rem(83px);
+    }
+
+    &__txt {
+        margin-top: rem(21px);
+    }
+}
+.p-cate{
+    padding-bottom: rem(80px);
+    &-grid{
+        margin-top: rem(40px);
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: rem(47px) rem(30px);
+        .cate-item
+        {
+            text-align: center;
+            display: block;
+            &:hover{
+                h3{
+                    color:$primary;
+                }
+                img{
+                   box-shadow: 0 rem(4px) rem(15px) rgb(0 0 0 / 8%);
+                }
+            } 
+            img{
+                height: rem(253px);
+                transition: all 0.3s;
+            }
+            &__ttl{
+                margin-top: rem(16px);
+                font-size: rem(22px);
+                font-weight: 600;
+                color: #222;
+            }
+        }
+    }
+}
+.p-trending{
+    background: $primary;
+    padding: rem(90px) 0 rem(76px);
+  
+    .container{
+        max-width: 100%;
+
+    }
+    &__sub{
+        font-size: rem(18px);
+        line-height: calc(26/18);
+        color:#fff;
+        margin-top: rem(24px);
+        margin-bottom: rem(50px);
+    }
+    &-grid{
+        display: flex;
+        justify-self: center;
+        gap: rem(33px);
+       
+    }
+}
+.p-lasted{
+    padding: rem(113px) 0 rem(95px);
+    &.pad-top{
+        padding-top: 0;
+    }
+    &__sub{
+        margin: rem(27px) 0 rem(36px);
+        font-size: rem(18px);
+        line-height: calc(26/18);
+        color:#444;
+    }
+    .container{
+        max-width: 100%;
+    }
+}

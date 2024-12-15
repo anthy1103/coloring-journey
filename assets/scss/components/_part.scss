@@ -64,3 +64,40 @@ html {
     height: 100%;
     object-fit: scale-down;
 }
+.trending-item{
+    width: rem(318px);
+    border: 1px solid #F5F4EC;
+    padding-bottom: rem(35px);
+    background: #fff;
+    text-align: center;
+    border-radius: rem(12px);
+    background-image: linear-gradient(#F3F2E1, #FFFEF5);
+    
+    &.hover{
+        &:hover{
+            background: $primary;
+            h3{
+                color: #fff;
+            }
+        }
+    }
+    &__img{
+        margin: rem(11px);
+        background: #fff;
+        height: rem(295px);
+        border-radius: rem(12px);
+        overflow: hidden;
+        padding: rem(30px);
+    }
+    &__ttl{
+        font-size: rem(22px);
+        line-height: calc(24/22);
+        font-weight: 600;
+        color: #222;
+        align-items: center;
+        height: rem(40px);
+        display: flex;
+        justify-content: center;
+        margin-top: rem(20px);
+    }
+}

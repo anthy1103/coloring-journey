@@ -189,7 +189,7 @@ img.alignleft {
 }
 .container {
   margin: auto;
-  max-width: 153rem;
+  max-width: 133rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   width: 100%;
@@ -1095,6 +1095,90 @@ button.swiper-pagination-bullet {
   cursor: pointer;
 }
 
+.p-header {
+  background: #fff;
+}
+.p-header__content {
+  display: flex;
+  align-items: center;
+  height: 10rem;
+}
+.p-header__logo {
+  padding: 1.4rem 0;
+  margin-right: 16rem;
+}
+.p-header__search {
+  width: 67rem;
+  height: 5.5rem;
+  position: relative;
+}
+.p-header__search input {
+  background: #F7F6ED;
+  border-radius: 9rem;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 1.6rem;
+  color: #666;
+  padding-left: 6.6rem;
+}
+.p-header__search .ic_search {
+  position: absolute;
+  width: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2.2rem;
+}
+
+main {
+  position: relative;
+}
+main:before {
+  position: absolute;
+  content: "";
+  background: url(../images/bg-top.png) top center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60rem;
+  z-index: -1;
+}
+main nav {
+  border-bottom: 1px dashed #DBD8C3;
+  padding: 2.5rem 0;
+}
+main nav .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4.5rem;
+}
+main nav .menu .ic-menu {
+  background: #fff;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.05);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+main nav .menu .ic-menu img {
+  width: 3.6rem;
+  height: 3.6rem;
+}
+main nav .menu-link {
+  display: flex;
+  font-size: 1.6rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+main nav .menu-link:hover, main nav .menu-link.is-active {
+  color: #0C794D;
+}
+
 .form-control {
   display: block;
   width: 100%;
@@ -1143,6 +1227,24 @@ input[type=month].form-control {
   width: 100%;
 }
 
+.ttl02 {
+  color: #000;
+  font-size: 4.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+.ttl02 .primary {
+  color: #0C794D;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.cl-white {
+  color: #fff;
+}
+
 .breadcumb {
   margin: 1.5rem 0;
 }
@@ -1182,7 +1284,7 @@ input[type=month].form-control {
   }
 }
 .breadcumb li span {
-  color: #43B7D7;
+  color: #0C794D;
 }
 @media (max-width: 766px) {
   .breadcumb li span {
@@ -1206,4 +1308,39 @@ html {
   height: 100%;
   -o-object-fit: scale-down;
      object-fit: scale-down;
+}
+
+.trending-item {
+  width: 31.8rem;
+  border: 1px solid #F5F4EC;
+  padding-bottom: 3.5rem;
+  background: #fff;
+  text-align: center;
+  border-radius: 1.2rem;
+  background-image: linear-gradient(#F3F2E1, #FFFEF5);
+}
+.trending-item.hover:hover {
+  background: #0C794D;
+}
+.trending-item.hover:hover h3 {
+  color: #fff;
+}
+.trending-item__img {
+  margin: 1.1rem;
+  background: #fff;
+  height: 29.5rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  padding: 3rem;
+}
+.trending-item__ttl {
+  font-size: 2.2rem;
+  line-height: 1.0909090909;
+  font-weight: 600;
+  color: #222;
+  align-items: center;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 }/*# sourceMappingURL=style.css.map */

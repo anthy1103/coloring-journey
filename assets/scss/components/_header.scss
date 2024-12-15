@@ -1,0 +1,93 @@
+.p-header {
+    background: #fff;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        height: rem(100px);
+    }
+
+    &__logo {
+        padding: rem(14px) 0;
+        margin-right: rem(160px);
+    }
+
+    &__search {
+        width: rem(670px);
+        height: rem(55px);
+        position: relative;
+
+        input {
+            background: #F7F6ED;
+            border-radius: rem(90px);
+            width: 100%;
+            height: 100%;
+            border: none;
+            font-size: rem(16px);
+            color: #666;
+            padding-left: rem(66px);
+        }
+
+        .ic_search {
+            position: absolute;
+            width: rem(25px);
+            top: 50%;
+            transform: translateY(-50%);
+            left: rem(22px);
+        }
+    }
+}
+
+main {
+    position: relative;
+
+    &:before {
+        position: absolute;
+        content: "";
+        background: url(../images/bg-top.png) top center;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: rem(600px);
+        z-index: -1;
+    }
+
+    nav {
+        border-bottom: 1px dashed #DBD8C3;
+        padding: rem(25px) 0;
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: rem(45px);
+
+            .ic-menu {
+                background: #fff;
+                width: rem(55px);
+                height: rem(55px);
+                border-radius: rem(10px);
+                box-shadow: 0 rem(4px) rem(4px) rgb(0 0 0 / 5%);
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: rem(36px);
+                    height: rem(36px);
+                }
+            }
+            &-link{
+                display: flex;
+                font-size: rem(16px);
+                flex-direction: column;
+                align-items: center;
+                gap: rem(15px);
+                &:hover,&.is-active{
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
