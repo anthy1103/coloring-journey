@@ -1,0 +1,77 @@
+.p-footer {
+    margin-top: rem(60px);
+    background: $primary;
+    color: #fff;
+    padding-bottom: rem(38px);
+    .logofooter {
+        background-image: linear-gradient(#F3F2E1, #FFFEF5);
+        border-radius: 0 0 rem(30px) rem(30px);
+        width: rem(186px);
+        height: rem(103px);
+
+        img {
+            width: rem(155px);
+        }
+    }
+
+    &-content {
+        margin-top: rem(11px);
+        display: flex;
+        justify-content: space-between
+    }
+
+    &__about {
+        width: rem(635px);
+    }
+
+    &__menu {
+        width: rem(162px);
+
+        .footer-link {
+            background: url(../images/ic_right.svg) no-repeat left center;
+            padding-left: rem(13px);
+            line-height: calc(30 / 16);
+            display: block;
+        }
+
+    }
+
+    &__social {
+        width: rem(105px);
+
+        .social-link {
+            display: flex;
+            gap: rem(10px);
+            align-items: center;
+            margin-bottom: rem(2px);
+            line-height: 1;
+
+            img {
+                width: rem(20px);
+                height: rem(28px);
+                object-fit: scale-down;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    &__email {
+        margin-top: rem(19px);
+
+        img {
+            margin-right: rem(12px);
+        }
+    }
+
+    &__txt {
+        font-size: rem(16px);
+        line-height: calc(22/16);
+        &.txt-02{
+            margin: rem(44px) 0 rem(59px);
+        }
+    }
+}
+.copyright{
+    font-size: rem(16px);
+    font-weight: 600;
+}
