@@ -1,0 +1,149 @@
+@import "common/variables";
+@import "common/mixin";
+
+.p-author{
+    padding-top: rem(86px);
+    &-top{
+        display: flex;
+        justify-content: space-between;
+        .author-img
+        {
+            width: rem(443px);
+        }
+        .author-meta{
+            width: calc(100% - rem(443px) - rem(77px));
+            &__ttl{
+                color: $primary;
+                margin-bottom: rem(27px);
+            }
+            &__social{
+                display: flex;
+                label{
+                    font-size: rem(18px);
+                    margin-right: rem(19px);
+                }
+                a{
+                    margin-right: rem(12px);
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    &-list{
+        padding-top: rem(67px);
+        margin-top: rem(95px);
+        position: relative;
+        &:after{
+            position: absolute;
+            content: "";
+            background: url(../images/bg-top.png) top center;
+            background-size: cover;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: rem(600px);
+            z-index: -1;
+        }
+        .tab{
+            border-bottom: 1px solid #D6D8C5;
+            display: flex;
+            gap: rem(9px);
+            margin-bottom: rem(37px);
+            li{
+                &.active{
+                    a{
+                        background: $primary;
+                        color: #fff;
+                        .num{
+                            color: #fff;
+                        }
+                    }
+                }
+                a{
+                    display: inline-block;
+                    font-size: rem(25px);
+                    color: #444;
+                    height: rem(66px);
+                    width: rem(189px);
+                    background: #fff;
+                    border-radius: rem(12px) rem(12px) 0 0 ;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .num{
+                        font-style: normal;
+                        color: #BDBDBD;
+                        margin-left: rem(5px);
+                    }
+                }
+            }
+        }
+        .tab-content-wrap{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: rem(30px);
+        }
+        .article
+        {
+            &__img{
+                display: block;
+                height: rem(247px);
+                margin-bottom: rem(17px);
+            }
+            &__ttl{
+                font-size: rem(20px);
+                font-weight: 600;
+                line-height: calc(24/20);
+                color: #222;
+                margin-bottom: rem(13px);
+                display: block;
+            }
+            &__meta{
+                display: flex;
+                font-size: rem(14px);
+                gap: rem(22px);
+                color: #777;
+                margin-bottom: rem(14px);
+                &__time{
+                    background: url(../images/ic_calendar.svg)
+                    no-repeat left center;
+                    background-size: rem(20px) rem(20px);
+                    padding-left: rem(27px);
+                }
+                &__view{
+                    background: url(../images/ic_calendar.svg)
+                    no-repeat left center;
+                    background-size: rem(20px) rem(20px);
+                    padding-left: rem(27px);
+                }
+            }
+            &__txt{
+                font-size: rem(18px);
+                color:#444;
+                line-height: calc(22/18);
+            }
+        }
+    }
+    .author-other
+    {
+        border-top:1px solid #D6D8C5;
+        margin-top: rem(44px);
+        padding-top: rem(43px);
+        &__ttl{
+            position: relative;
+            padding-bottom: rem(13px);
+            margin-bottom: rem(42px);
+            &:after{
+                width: rem(100px);
+                height: rem(3px);
+                position: absolute;
+                content: "";
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin:auto;
+                background: $primary;
+            }
+        }
+    }
+}

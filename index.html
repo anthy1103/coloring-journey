@@ -13,17 +13,16 @@
     <link rel="stylesheet" href="assets/css/style.css?ver=1.0.1">
     <link rel="stylesheet" href="assets/css/home.css">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
+    <div class="bg-black"></div>
     <header>
         <div class="p-header">
-            <div class="menu-sidebar">
-                <span class="ic-sidebar"></span>
+            <span class="ic-sidebar" id="btn-sidebar"></span>
+            <div class="menu-sidebar" id="sidebar">
                 <div class="menu-sidebar-wrap">
                     <span class="menu-close">Subscribe to Newsletters</span>
                     <ul class="level_1">
@@ -39,26 +38,30 @@
                         <li><a href="#">CJellyfish Coloring Pages</a></li>
                         <li><a href="#">Dolphin Coloring Pages</a></li>
                         <li><a href="#">Octopus Coloring Pages</a></li>
-                        <li><a href="#">Whale Coloring Pages</a>
-                            <ul class="level_2">
-                                <li><a href="#">Cat Coloring Pages</a></li>
-                                <li><a href="#">Shark Coloring Pages</a></li>
-                                <li><a href="#">CJellyfish Coloring Pages</a></li>
-                                <li><a href="#">Dolphin Coloring Pages</a></li>
-                                <li><a href="#">Octopus Coloring Pages</a>
-                                    <ul class="level_3">
-                                        <li><a href="#">Lion Coloring Pages</a></li>
-                                        <li><a href="#">Tiger Coloring Pages</a></li>
-                                        <li><a href="#">Cat Coloring Pages</a></li>
-                                        <li><a href="#">Shark Coloring Pages</a></li>
-                                        <li><a href="#">CJellyfish Coloring Pages</a></li>
-                                        <li><a href="#">Dolphin Coloring Pages</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Lion Coloring Pages</a></li>
-                                <li><a href="#">Tiger Coloring Pages</a></li>
-                                <li><a href="#">Cat Coloring Pages</a></li>
-                            </ul>
+                        <li class="parent"><a href="#">Whale Coloring Pages</a>
+                            <div class="wrapper">
+                                <ul class="level_2">
+                                    <li><a href="#">Cat Coloring Pages</a></li>
+                                    <li><a href="#">Shark Coloring Pages</a></li>
+                                    <li><a href="#">CJellyfish Coloring Pages</a></li>
+                                    <li><a href="#">Dolphin Coloring Pages</a></li>
+                                    <li><a href="#">Octopus Coloring Pages<span class="ic-down"></span></a>
+                                        <ul class="level_3">
+                                            <li><a href="#">Lion Coloring Pages</a></li>
+                                            <li><a href="#">Tiger Coloring Pages</a></li>
+                                            <li><a href="#">Cat Coloring Pages</a></li>
+                                            <li><a href="#">Shark Coloring Pages</a></li>
+                                            <li><a href="#">CJellyfish Coloring Pages</a></li>
+                                            <li><a href="#">Dolphin Coloring Pages</a></li>
+                                        </ul>
+
+                                    </li>
+                                    <li><a href="#">Lion Coloring Pages</a></li>
+                                    <li><a href="#">Tiger Coloring Pages</a></li>
+                                    <li><a href="#">Cat Coloring Pages</a></li>
+                                </ul>
+                            </div>
+
                         </li>
                         <li><a href="#">Elephant Coloring Pages</a></li>
                     </ul>
@@ -86,24 +89,89 @@
                     <span class="icon_bar"></span>
                 </div>
                 <ul class="menu">
-                    <li><a href="#" title="" class="menu-link is-active"><span class="ic-menu"><img class="img-scale"
-                                    src="assets/images/ic_01.png" alt=""></span>Home</a></li>
-                    <li><a href="#" title="" class="menu-link"><span class="ic-menu"><img class="img-scale"
-                                    src="assets/images/ic_02.png" alt=""></span>Categories</a></li>
-                    <li><a href="#" title="" class="menu-link"><span class="ic-menu"><img class="img-scale"
-                                    src="assets/images/ic_03.png" alt=""></span>New Releases</a></li>
-                    <li><a href="#" title="" class="menu-link"><span class="ic-menu"><img class="img-scale"
-                                    src="assets/images/ic_04.png" alt=""></span>Most Popular</a></li>
-                    <li><a href="#" title="" class="menu-link"><span class="ic-menu"><img class="img-scale"
-                                    src="assets/images/ic_05.png" alt=""></span>Seasonal</a></li>
-                    <li><a href="#" title="" class="menu-link"><span class="ic-menu"><img class="img-scale"
-                                    src="assets/images/ic_06.png" alt=""></span>For Kids</a></li>
-                    <li><a href="#" title="" class="menu-link"><span class="ic-menu"><img class="img-scale"
-                                    src="assets/images/ic_07.png" alt=""></span>For Adults</a></li>
-                    <li><a href="#" title="" class="menu-link"><span class="ic-menu"><img class="img-scale"
-                                    src="assets/images/ic_08.png" alt=""></span>Printables</a></li>
-                    <li><a href="#" title="" class="menu-link"><span class="ic-menu"><img class="img-scale"
-                                    src="assets/images/ic_09.png" alt=""></span>Contact Us</a></li>
+                    <li><a href="#" title="" class="menu-link is-active"><span class="ic-menu"><img class="img-scale" src="assets/images/ic_01.png" alt=""></span>Home</a></li>
+                    <li><a href="#" title="" class="menu-link"><span class="ic-menu"><img class="img-scale" src="assets/images/ic_02.png" alt=""></span>Categories</a></li>
+                    <li><a href="#" title="" class="menu-link"><span class="ic-menu"><img class="img-scale" src="assets/images/ic_03.png" alt=""></span>New Releases</a></li>
+                    <li class="has-child">
+                        <a href="#" title="" class="menu-link"><span class="ic-menu"><img class="img-scale" src="assets/images/ic_04.png" alt=""></span>Most Popular</a>
+                        <div class="menu-sub">
+                            <div class="menu-sub__item">
+                                <a class="ttl-level-2" href="">Categories</a>
+                                <ul class="menu-sub__level3">
+                                    <li><a href="#">Lion Coloring Pages</a></li>
+                                    <li><a href="#">Tiger Coloring Pages</a></li>
+                                    <li><a href="#">Cat Coloring Pages</a></li>
+                                    <li><a href="#">Shark Coloring Pages</a></li>
+                                    <li><a href="#">CJellyfish Coloring Pages</a></li>
+                                    <li><a href="#">Dolphin Coloring Pages</a></li>
+                                    <li><a href="#">CJellyfish Coloring Pages</a></li>
+                                    <li><a href="#">Dolphin Coloring Pages</a></li>
+                                    <li><a href="#">Octopus Coloring Pages</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu-sub__item">
+                                <a class="ttl-level-2" href="">Categories</a>
+                                <ul class="menu-sub__level3">
+                                    <li><a href="#">Lion Coloring Pages</a></li>
+                                    <li><a href="#">Tiger Coloring Pages</a></li>
+                                    <li><a href="#">Cat Coloring Pages</a></li>
+                                    <li><a href="#">Shark Coloring Pages</a></li>
+                                    <li><a href="#">CJellyfish Coloring Pages</a></li>
+                                    <li><a href="#">Dolphin Coloring Pages</a></li>
+                                    <li><a href="#">CJellyfish Coloring Pages</a></li>
+                                    <li><a href="#">Dolphin Coloring Pages</a></li>
+                                    <li><a href="#">Octopus Coloring Pages</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu-sub__item">
+                                <a class="ttl-level-2" href="">Categories</a>
+                                <ul class="menu-sub__level3">
+                                    <li><a href="#">Lion Coloring Pages</a></li>
+                                    <li><a href="#">Tiger Coloring Pages</a></li>
+                                    <li><a href="#">Cat Coloring Pages</a></li>
+                                    <li><a href="#">Shark Coloring Pages</a></li>
+                                    <li><a href="#">CJellyfish Coloring Pages</a></li>
+                                    <li><a href="#">Dolphin Coloring Pages</a></li>
+                                    <li><a href="#">CJellyfish Coloring Pages</a></li>
+                                    <li><a href="#">Dolphin Coloring Pages</a></li>
+                                    <li><a href="#">Octopus Coloring Pages</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu-sub__item">
+                                <a class="ttl-level-2" href="">Categories</a>
+                                <ul class="menu-sub__level3">
+                                    <li><a href="#">Lion Coloring Pages</a></li>
+                                    <li><a href="#">Tiger Coloring Pages</a></li>
+                                    <li><a href="#">Cat Coloring Pages</a></li>
+                                    <li><a href="#">Shark Coloring Pages</a></li>
+                                    <li><a href="#">CJellyfish Coloring Pages</a></li>
+                                    <li><a href="#">Dolphin Coloring Pages</a></li>
+                                    <li><a href="#">CJellyfish Coloring Pages</a></li>
+                                    <li><a href="#">Dolphin Coloring Pages</a></li>
+                                    <li><a href="#">Octopus Coloring Pages</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu-sub__item">
+                                <a class="ttl-level-2" href="">Categories</a>
+                                <ul class="menu-sub__level3">
+                                    <li><a href="#">Lion Coloring Pages</a></li>
+                                    <li><a href="#">Tiger Coloring Pages</a></li>
+                                    <li><a href="#">Cat Coloring Pages</a></li>
+                                    <li><a href="#">Shark Coloring Pages</a></li>
+                                    <li><a href="#">CJellyfish Coloring Pages</a></li>
+                                    <li><a href="#">Dolphin Coloring Pages</a></li>
+                                    <li><a href="#">CJellyfish Coloring Pages</a></li>
+                                    <li><a href="#">Dolphin Coloring Pages</a></li>
+                                    <li><a href="#">Octopus Coloring Pages</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#" title="" class="menu-link"><span class="ic-menu"><img class="img-scale" src="assets/images/ic_05.png" alt=""></span>Seasonal</a></li>
+                    <li><a href="#" title="" class="menu-link"><span class="ic-menu"><img class="img-scale" src="assets/images/ic_06.png" alt=""></span>For Kids</a></li>
+                    <li><a href="#" title="" class="menu-link"><span class="ic-menu"><img class="img-scale" src="assets/images/ic_07.png" alt=""></span>For Adults</a></li>
+                    <li><a href="#" title="" class="menu-link"><span class="ic-menu"><img class="img-scale" src="assets/images/ic_08.png" alt=""></span>Printables</a></li>
+                    <li><a href="#" title="" class="menu-link"><span class="ic-menu"><img class="img-scale" src="assets/images/ic_09.png" alt=""></span>Contact Us</a></li>
                 </ul>
             </div>
         </nav>

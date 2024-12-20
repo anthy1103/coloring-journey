@@ -5,7 +5,6 @@ let scrollTop, scrollLeft = 0;
 app.init = function () {
 	app.tab();
 	app.anchorLink();
-	app.splitText();
 };
 
 app.tab = function () {
@@ -45,39 +44,49 @@ app.anchorLink = function () {
 
 }
 
-app.faq = function () {
-	$('.faq-item__head').on('click', function () {
-		var findElm = $(this).next(".faq-item__body");
-		$(findElm).stop().slideToggle();
-		$(this).children('.ic').stop().toggleClass('ic-minus');
-	});
-}
 
-app.splitText = function () {
-	$('.btn_buy_shoppe').each(function () {
-		let i = 1;
-		$(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-		$(this).find("span").each(function () {
-			$(this).attr('style', `--i:${i}`)
-			i++;
+$(function () {
+	// whenever we hover over a menu item that has a submenu
+	$('.parent').on('mouseover', function () {
+		var $menuItem = $(this),
+			$submenuWrapper = $('> .wrapper', $menuItem);
+		// grab the menu item's position relative to its positioned parent
+		var menuItemPos = $menuItem.position();
+		// place the submenu in the correct position relevant to the menu item
+		$submenuWrapper.css({
+			top: menuItemPos.top,
+			left: menuItemPos.left + Math.round($menuItem.outerWidth() * 1)
 		});
 	});
+});
 
-}
 $(document).ready(function () {
+
 	if ($(".wow").length > 0) {
 		var wow = new WOW({
 			animateClass: 'animate_animated'
 		});
 		wow.init();
 	}
-	$(".ic_menu ").click(function () {
+	$(".ic-down").click(function () {
+		$('.level_3').slideToggle();
 		$(this).toggleClass('active');
-		$(".menu_more").slideToggle();
 	});
-	$(".top-mb__ic").click(function () {
-		$(".p-header__menu").addClass('show');
-		$(".bg-close-menu").addClass('show');
+	$(".ic-sidebar").click(function () {
+		$(".menu-sidebar").addClass('show');
+		$(".bg-black").addClass('show');
+	});
+	$(".bg-black").click(function () {
+		$(".menu-sidebar").removeClass('show');
+		$(this).removeClass('show');
+	});
+
+	$(".anchor-ttl").click(function () {
+		$(".anchor-lst").slideToggle();
+		$(this).toggleClass('active')
+	});
+	$(".btn-more").click(function () {
+		$(".anchor-lst").addClass('show');
 	});
 
 	$(".bg-close-menu").click(function () {
@@ -99,17 +108,4 @@ $(document).ready(function () {
 		$(findElm).stop().slideToggle();
 	});
 	app.init();
-});
-$(function () {
-	$("include").each(function () {
-		var file = $(this).attr("src");
-		$(this).load(file, function () {
-
-			$('.js-pagetop').click(function () {
-				$('html, body').animate({ scrollTop: 0 });
-				return false;
-			});
-		});
-
-	});
 });

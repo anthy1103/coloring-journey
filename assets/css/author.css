@@ -1,0 +1,135 @@
+.p-author {
+  padding-top: 8.6rem;
+}
+.p-author-top {
+  display: flex;
+  justify-content: space-between;
+}
+.p-author-top .author-img {
+  width: 44.3rem;
+}
+.p-author-top .author-meta {
+  width: calc(100% - 44.3rem - 7.7rem);
+}
+.p-author-top .author-meta__ttl {
+  color: #0C794D;
+  margin-bottom: 2.7rem;
+}
+.p-author-top .author-meta__social {
+  display: flex;
+}
+.p-author-top .author-meta__social label {
+  font-size: 1.8rem;
+  margin-right: 1.9rem;
+}
+.p-author-top .author-meta__social a {
+  margin-right: 1.2rem;
+  display: inline-block;
+}
+.p-author-list {
+  padding-top: 6.7rem;
+  margin-top: 9.5rem;
+  position: relative;
+}
+.p-author-list:after {
+  position: absolute;
+  content: "";
+  background: url(../images/bg-top.png) top center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60rem;
+  z-index: -1;
+}
+.p-author-list .tab {
+  border-bottom: 1px solid #D6D8C5;
+  display: flex;
+  gap: 0.9rem;
+  margin-bottom: 3.7rem;
+}
+.p-author-list .tab li.active a {
+  background: #0C794D;
+  color: #fff;
+}
+.p-author-list .tab li.active a .num {
+  color: #fff;
+}
+.p-author-list .tab li a {
+  display: inline-block;
+  font-size: 2.5rem;
+  color: #444;
+  height: 6.6rem;
+  width: 18.9rem;
+  background: #fff;
+  border-radius: 1.2rem 1.2rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.p-author-list .tab li a .num {
+  font-style: normal;
+  color: #BDBDBD;
+  margin-left: 0.5rem;
+}
+.p-author-list .tab-content-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+.p-author-list .article__img {
+  display: block;
+  height: 24.7rem;
+  margin-bottom: 1.7rem;
+}
+.p-author-list .article__ttl {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #222;
+  margin-bottom: 1.3rem;
+  display: block;
+}
+.p-author-list .article__meta {
+  display: flex;
+  font-size: 1.4rem;
+  gap: 2.2rem;
+  color: #777;
+  margin-bottom: 1.4rem;
+}
+.p-author-list .article__meta__time {
+  background: url(../images/ic_calendar.svg) no-repeat left center;
+  background-size: 2rem 2rem;
+  padding-left: 2.7rem;
+}
+.p-author-list .article__meta__view {
+  background: url(../images/ic_calendar.svg) no-repeat left center;
+  background-size: 2rem 2rem;
+  padding-left: 2.7rem;
+}
+.p-author-list .article__txt {
+  font-size: 1.8rem;
+  color: #444;
+  line-height: 1.2222222222;
+}
+.p-author .author-other {
+  border-top: 1px solid #D6D8C5;
+  margin-top: 4.4rem;
+  padding-top: 4.3rem;
+}
+.p-author .author-other__ttl {
+  position: relative;
+  padding-bottom: 1.3rem;
+  margin-bottom: 4.2rem;
+}
+.p-author .author-other__ttl:after {
+  width: 10rem;
+  height: 0.3rem;
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #0C794D;
+}/*# sourceMappingURL=author.css.map */

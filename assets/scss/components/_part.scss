@@ -1,10 +1,5 @@
 .breadcumb {
-    margin: rem(15px) 0;
-
-    @include mq("md", min) {
-        margin: rem(15px) 0;
-    }
-
+    margin-bottom: rem(27px);
     li {
         display: inline-block;
         position: relative;
@@ -23,27 +18,28 @@
         }
 
         &:after {
-            content: "»";
+            content: "/";
             position: absolute;
             right: rem(-3px);
+            color: #666;
             top: rem(-3px);
             font-size: rem(20px);
         }
 
         a {
-            font-size: rem(14px);
-
+            font-size: rem(15px);
+            color: #666;
             @include mq("md", min) {
-                font-size: rem(18px);
+                font-size: rem(15px);
             }
         }
 
         span {
 
-            color: $primary;
+            color: #666;
 
             @include mq("md") {
-                font-size: rem(14px);
+                font-size: rem(15px);
             }
         }
     }
@@ -52,7 +48,9 @@
 html {
     scroll-behavior: smooth;
 }
-
+.hidden{
+    display: none !important;
+}
 .img_cover {
     width: 100%;
     height: 100%;
@@ -99,5 +97,87 @@ html {
         display: flex;
         justify-content: center;
         margin-top: rem(20px);
+    }
+}
+.description{
+    font-size: rem(18px);
+    line-height: calc(26/18);
+    color: #444;
+    &__ttl{
+        font-size: rem(20px);
+        font-weight: bold;
+        color: #222;
+        margin-top: rem(20px);
+        margin-bottom: rem(5px);
+    }
+    &__lst{
+        margin-left: rem(25px);
+        li{
+            list-style: disc;
+        }
+    }
+}
+.p-team{
+    &__ttl{
+        font-size: rem(30px);
+        font-weight: bold;
+        color: $primary;
+        margin-bottom: rem(25px);
+    }
+    &-section{
+        margin-top: rem(26px);
+    }
+    .team-js{
+        display: flex;
+        gap: rem(24px);
+        .team-item{
+            width: 20%;
+            background: transparent;
+            padding: rem(30px);
+            text-align: center;
+            &__ttl{
+                font-weight: 600;
+                font-size: rem(16px);
+                margin-top: rem(13px);
+            }
+            &__job
+            {
+                font-size: rem(14px);
+            }
+            img{
+                width: rem(120px);
+                height: rem(120px);
+            }   
+            &.--item02{
+                border: 1px solid #F5F4EC;
+                border-radius: rem(12px);
+                background-image: linear-gradient(#F3F2E1, #FFFEF5);
+                img{
+                    width: rem(130px);
+                    border-style: solid;
+                    border-color: transparent;
+                    border-width: rem(2px);
+                    height: rem(130px);
+                    border-radius: 50%;
+                    background: #fff;
+                    padding: rem(5px);
+                    &.bd-01{
+                        border-color: #2EA251;
+                    }
+                    &.bd-02{
+                        border-color: #FAD50A;
+                    }
+                    &.bd-03{
+                        border-color: #F47A6E;
+                    }
+                    &.bd-04{
+                        border-color: #7F9DFF;
+                    }
+                    &.bd-05{
+                        border-color: #57BA9E;
+                    }
+                }
+            }
+        }
     }
 }
